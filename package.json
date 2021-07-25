@@ -1,0 +1,23 @@
+{
+  "name": "staticwebserver",
+  "version": "1.0.0",
+  "description": "Tiny NodeJS Static Web Server",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "supervisor app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soraer/anywindow.git"
+  },
+  "author": "sora",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/soraer/anywindow/issues"
+  },
+  "homepage": "https://github.com/soraer/anywindow#readme",
+  "dependencies": {
+    "supervisor": "^0.12.0"
+  }
+}
