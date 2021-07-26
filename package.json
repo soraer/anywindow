@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/soraer/anywindow#readme",
   "dependencies": {
+    "handlebars": "^4.7.7",
     "supervisor": "^0.12.0"
   }
 }
