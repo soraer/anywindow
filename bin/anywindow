@@ -1,0 +1,6 @@
+#! /usr/bin/env node
+// packaeg.json 中配置bin字段属性
+// 添加anywindow文件
+// 执行 chmod +x bin/anywindow 添加执行权限
+// 此时就可以用 bin/anywindow -p 9999 来启动
+require('../src/index')

@@ -3,9 +3,9 @@ const {cache} = require('../../config')
 function refreshRes(stats, res) {
     const {maxAge, expires, cacheControl, lastModified, etag} = cache
 
-    if (expires) {
-        res.setHeader('Expires', (new Date(Date.now() + maxAge * 1000)))
-    }
+    // if (expires) {
+    //     res.setHeader('Expires', (new Date(Date.now() + maxAge * 1000)))
+    // }
 
     if (cacheControl) {
         res.setHeader('Cache-Control', `public, max-age=${maxAge}`)
@@ -15,9 +15,9 @@ function refreshRes(stats, res) {
         res.setHeader('Last-Modified', stats.mtime.toUTCString())
     }
 
-    if (etag) {
-        res.setHeader('ETag', `${stats.size}-${stats.mtime}`)
-    }
+    // if (etag) {
+    //     res.setHeader('ETag', `${stats.size}-${stats.mtime}`)
+    // }
 }
 
 module.exports = function isFresh(stats, req, res) {
