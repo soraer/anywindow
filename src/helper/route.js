@@ -7,6 +7,7 @@ const readdir = promisify(fs.readdir)
 const config = require("../../config")
 const mimeTypes = require("./mime")
 const compress = require("./compress")
+const isFresh = require("./cache")
 
 const tplPath = path.join(__dirname, '../template/dir.html')
 const source = fs.readFileSync(tplPath)
@@ -18,6 +19,13 @@ module.exports = async function (req, res, filePath) {
             const contentType = mimeTypes(filePath)
             res.statusCode = "200"
             res.setHeader('Content-Type', contentType)
+
+            if (isFresh(stats, req, res)) {
+                res.statusCode = "304"
+                res.end()
+                return
+            }
+
             let rs = fs.createReadStream(filePath)
             if (filePath.match(config.compress)) {
                 rs = compress(rs, req, res)
