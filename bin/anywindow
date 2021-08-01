@@ -4,3 +4,6 @@
 // 执行 chmod +x bin/anywindow 添加执行权限
 // 此时就可以用 bin/anywindow -p 9999 来启动
 require('../src/index')
+
+// npm login 登陆npm
+// npm publish 发布到npm
