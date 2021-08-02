@@ -1,6 +1,6 @@
 const http = require("http")
 const path = require('path')
-const chalk = require("chalk")
+// const chalk = require("chalk")
 const config = require("../config")
 const helper = require("./helper/route")
 const openUrl = require('../src/helper/openUrl')
@@ -18,7 +18,8 @@ class Server {
 
         server.listen(this.config.port, this.config.hostname, () => {
             const add = `http://${this.config.hostname}:${this.config.port}`
-            console.log(`Server is running at ${chalk.green(add)}`)
+            // console.log(`Server is running at ${chalk.green(add)}`)
+            console.log(`Server is running at ${add}`)
             openUrl(add)
         })
     }
