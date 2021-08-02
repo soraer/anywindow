@@ -26,3 +26,14 @@ const argv = yargs
 
 const server = new Server(argv)
 server.start()
+
+// 如何把项目弄成npm包？
+// packaeg.json 中配置bin字段属性，配置对应的执行路径
+// 对应的在项目目录里添加bin文件夹和anywindow文件
+// linux里需要给文件添加执行权限
+// 执行 chmod +x bin/anywindow 添加执行权限
+// 此时就可以用 bin/anywindow -p 9999 来启动
+
+// 发布到npm
+// npm login 登陆npm
+// npm publish 发布到npm

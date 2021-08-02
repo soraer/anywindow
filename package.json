@@ -1,6 +1,6 @@
 {
-  "name": "staticwebserver",
-  "version": "1.0.0",
+  "name": "anywindow",
+  "version": "1.0.1",
   "description": "Tiny NodeJS Static Web Server",
   "main": "src/app.js",
   "bin": {
